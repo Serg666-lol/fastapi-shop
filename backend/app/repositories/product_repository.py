@@ -3,7 +3,7 @@ from typing import List, Optional
 from ..models.product import Product
 from ..schemas.product import ProductCreate
 
-class ProductRepository(BaseModel):
+class ProductRepository:
     def __init__(self, db: Session):
         self.db = db
 

@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from tuping import Dict
+from typing import Dict
 from ..repositories.product_repository import ProductRepository
 from ..schemas.cart import CartResponse, CartItem, CartItemCreate, CartItemUpdate
 from fastapi import HTTPException, status 
@@ -47,7 +47,7 @@ class CartService:
         
         product_ids = list(cart_data.keys())
         products = self.product_repository.get_multiple_by_ids(product_ids)
-        products_dict = [product.id: product for product in products]
+        products_dict = {product.id: product for product in products}
 
         cart_items = []
         total_price = 0.0
