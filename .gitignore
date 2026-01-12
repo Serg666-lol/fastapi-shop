@@ -45,6 +45,7 @@ dmypy.json
 media/
 staticfiles/
 db.sqlite3
+shop.db
 
 # Logs
 logs
@@ -75,7 +76,6 @@ coverage
 *.njsproj
 *.sln
 *.sw?
-
 *.tsbuildinfo
 .vscode
 celerybeat-schedule
