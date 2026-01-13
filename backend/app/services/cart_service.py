@@ -58,7 +58,7 @@ class CartService:
                 product = products_dict[product_id]
                 subtotal = product.price * quantity
 
-                cart_item = CartItem(product_id=product_id, name=product_id.name,
+                cart_item = CartItem(product_id=product_id, name=product.name,
                     price=product.price, quantity=quantity, subtotal=subtotal,
                     image_url=product.image_url)
                 
